@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Adex</title>
+  <meta name="title" content="Adex">
+  <meta name="description" content="This is a business agency html template made by codewithsadee">
+  <style>
+    
+    .clientwrapper {
+      display: flex;
+      align-items: center;
+      margin:auto;
+    }
+    .clientslider {
+      width: 80%;
+      height: 100px;
+      position: relative;
+      background: white;
+      align-items: center;
+      margin: auto;
+      align-items: center;
+      margin: auto;
+      
+      /* box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2); */
+      display: flex;
+      overflow: hidden;
+    }
+    .clientslide {
+     background-color: black;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      animation: slideshow 60s linear infinite;
+    }
+    .clientslide img {
+      height: 100px;
+      border: 3px solid white;
+      background: white;
+      padding: 0 30px 0 30px;
+    }
+    @keyframes slideshow {
+      0% {transform: translateX(0);}
+      100% {transform: translateX(-100%);}
+    }
+    .clientslider::before, .slider::after {
+      height: 100px;
+      width: 200px;
+      position: absolute;
+      content: "";
+      /* background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%); */
+      z-index: 2;
+    }
+    .clientslider::before {
+      left: 0;
+      top: 0;
+    }
+    .clientslider::after {
+      right:0;
+      top:0;
+      
+      transform: rotateZ(180deg);
+    }
+      </style>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="134px" height="104px" alt="Adex home" class="logo-light">
+
+        <img src="./assets/2 TPP Logos/logo.png" width="134px" height="104px" alt="Adex home" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="134px" height="104px" alt="Adex home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="active_link">Home</a>
+          </li>
+
+          <li>
+            <a href="job.html" class="navbar-link">Job Seeker</a>
+          </li>
+
+          <li>
+            <a href="companies.html" class="navbar-link">Companies</a>
+          </li>
+
+          <li>
+            <a href="crt.html" class="navbar-link">CRT & Placements</a>
+          </li>
+
+          <li>
+            <a href="abt.html" class="navbar-link">About Us</a>
+          </li>
+            <li>
+            <a href="abt.html" class="navbar-link">Team Login</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:info@email.com" class="contact-link">Sharukh@placementpark.com</a>
+
+          <a href="tel:001234567890" class="contact-link">+91 985563355</a>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-dribbble"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="#" class="btn btn-primary">Apply for Job</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+          <div class="hero-slider" data-slider>
+
+            <div class="slider-inner">
+              <ul class="slider-container" data-slider-container style="height:600px;">
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="height: 600px;">
+                    <img src="./assets/images/hero-slide-1.jpg" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <div class="hero-card">
+                    <figure class="img-holder" style="height: 600px;">
+                      <img src="./assets/images/hero-slide-2.jpg" width="575" height="550" alt="hero banner"
+                        class="img-cover">
+                    </figure>
+
+                    <button class="play-btn" aria-label="play adex intro">
+                      <ion-icon name="play" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="height: 600px;">
+                    <img src="./assets/images/hero-slide-3.jpg" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+              </ul>
+            </div>
+
+            <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+
+            <button class="slider-btn next" aria-label="slide to next" data-slider-next>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+
+          </div>
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">Crafting project specific solutions with expertise.</h1>
+
+            <p class="hero-text">
+              We’re a creative company that focuses on establishing long-term relationships with customers.
+            </p>
+
+            <div class="btn-wrapper">
+
+              <a href="#" class="btn btn-primary">Contact Us</a>
+
+              <!-- <a href="#" class="btn btn-outline">Contact Us</a> -->
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+      <section class="section service" aria-labelledby="service-label" style="background-color: #0f1941;">
+        <div class="container">
+
+          <!-- <p class="section-subtitle" id="service-label">What We Do?</p> -->
+
+          <h2 class="h2 section-title" style="text-align: center; color: white;">
+            The service we offer is specifically designed to meet your needs.
+          </h2>
+
+          <div class="content">
+            <div class="grid">
+              <figure class="effect-julia">
+                <img src="assets/images/pexels-andrea-piacquadio-3762800.jpg" alt="img21"/>
+                <figcaption>
+                  <h2>For <span>Clients</span></h2>
+                  <div>
+                    <p>Julia dances in the deep dark</p>
+                    <p>She loves the smell of the ocean</p>
+                    <p>And dives into the morning light</p>
+                  </div>
+                  <a href="#">View more</a>
+                </figcaption>			
+              </figure>
+              
+              <figure class="effect-julia">
+                <img src="assets/images/pexels-paul-loh-233698.jpg" alt="img22"/>
+                <figcaption>
+                  <h2>For <span>Comapnies</span></h2>
+                  <div>
+                    <p>Julia dances in the deep dark</p>
+                    <p>She loves the smell of the ocean</p>
+                    <p>And dives into the morning light</p>
+                  </div>
+                  <a href="#">View more</a>
+                </figcaption>			
+              </figure>
+            </div>
+                    </div>
+
+        </div>
+      </section>
+
+
+  
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+
+
+
+
+
+      <!-- 
+        - #STATS
+      -->
+
+  
+
+
+
+
+
+      <!-- 
+        - #PROJECT
+      -->
+     
+
+      <section class="section project" aria-labelledby="project-label" >
+         
+      <h2 class="h2 section-title" >
+        "Trusted by Top Brands: Our Proud Clients"
+      </h2>
+        <div class="container">
+
+          <!-- <p class="section-subtitle" id="project-label">Case Studies</p> -->
+
+
+          <div class="clientwrapper">
+
+            <div class="clientslider">
+              <div class="clientslide">
+                <img src="./assets/3 Client Logos/1.jpg" />
+                <img src="./assets/3 Client Logos/2.jpg" />
+                <img src="./assets/3 Client Logos/3.jpg" />
+                <img src="./assets/3 Client Logos/4.png" />
+                <img src="./assets/3 Client Logos/5.png" />
+                <img src="./assets/3 Client Logos/6.png" />
+                <img src="./assets/3 Client Logos/7.png" />
+                <img src="./assets/3 Client Logos/8.jpg" />
+                <img src="./assets/3 Client Logos/9.jpg" />
+                <img src="./assets/3 Client Logos/10.png" />
+                <img src="./assets/3 Client Logos/11.png" />
+                <img src="./assets/3 Client Logos/12.jpeg" />
+                <img src="./assets/3 Client Logos/13.jpeg" />
+                <img src="./assets/3 Client Logos/14.jpeg" />
+                <img src="./assets/3 Client Logos/15.jpeg" />
+                <img src="./assets/3 Client Logos/16.jpeg" />
+                <img src="./assets/3 Client Logos/17.jpeg" />
+                <img src="./assets/3 Client Logos/18.jpeg" />
+                <img src="./assets/3 Client Logos/19.jpeg" />
+                <img src="./assets/3 Client Logos/20.jpeg" />
+                <img src="./assets/3 Client Logos/21.jpeg" />
+                <img src="./assets/3 Client Logos/22.jpeg" />
+                <img src="./assets/3 Client Logos/23.png" />
+          
+              </div>
+             <div class="clientslide">
+                <img src="./assets/3 Client Logos/1.jpg" />
+                <img src="./assets/3 Client Logos/2.jpg" />
+                <img src="./assets/3 Client Logos/3.jpg" />
+                <img src="./assets/3 Client Logos/4.png" />
+                <img src="./assets/3 Client Logos/5.png" />
+                <img src="./assets/3 Client Logos/6.png" />
+                <img src="./assets/3 Client Logos/7.png" />
+                <img src="./assets/3 Client Logos/8.jpg" />
+                <img src="./assets/3 Client Logos/9.jpg" />
+                <img src="./assets/3 Client Logos/10.png" />
+                <img src="./assets/3 Client Logos/11.png" />
+                <img src="./assets/3 Client Logos/12.jpeg" />
+                <img src="./assets/3 Client Logos/13.jpeg" />
+                <img src="./assets/3 Client Logos/14.jpeg" />
+                <img src="./assets/3 Client Logos/15.jpeg" />
+                <img src="./assets/3 Client Logos/16.jpeg" />
+                <img src="./assets/3 Client Logos/17.jpeg" />
+                <img src="./assets/3 Client Logos/18.jpeg" />
+                <img src="./assets/3 Client Logos/19.jpeg" />
+                <img src="./assets/3 Client Logos/20.jpeg" />
+                <img src="./assets/3 Client Logos/21.jpeg" />
+                <img src="./assets/3 Client Logos/22.jpeg" />
+                <img src="./assets/3 Client Logos/23.png" />
+          
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- crt -->
+
+      <section class="section feature" aria-labelledby="feature-label" style="padding-top: 45px; background-color: #16FF00; padding-bottom: 45px;">
+        <div class="container">
+
+          <figure class="feature-banner">
+<img src="assets/images/3d-casual-life-young-man-with-laptop-on-chair.png" alt="">
+          </figure>
+
+          <div class="feature-content">
+
+            <!-- <p class="section-subtitle" id="feautre-label">Our Solutions</p> -->
+
+            <h2 class="h2 section-title">
+              Launch Yourself
+            </h2>
+
+            <p class="section-text">
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio,
+              dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus.
+            </p>
+            <div class="btn-wrapper" style="justify-content:left;">
+              <a href="#" class="btn btn-primary" style="background-color: black; color: white;  border: none;">Campus Recruitment</a>
+            </div>
+
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <!-- <section class="cta" aria-label="call to action">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Join our community by using our services and grow your business.
+          </h2>
+
+          <a href="#" class="btn btn-primary">Try it For Free</a>
+
+        </div>
+      </section> -->
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="134" height="104" alt="Adex home">
+        </a>
+
+        <p class="footer-text">
+          &copy; 2023 The Placement Park <br> All rights reserved.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+         
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Get in Touch</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, 50-75-27, Ganesh Nagar, Satyam Junction, Vizag 53001          </address>
+        </li>
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, KSR Towers, 6th Floor, Beside Indian Oil Pump, Madhapur, Hyderabad 500081         </address>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Learn More</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Home</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Our Story</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Companies</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">CRT and Placements</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul>
+
+      <div class="footer-list">
+
+        <p class="h4 footer-list-title">Our CEO</p>
+        <li>
+          <p >SharukhTirumani Co-Founder & CEO The Placement Park</p>
+        </li>
+
+        <li>
+          <a href="mailto:info@email.com" class="footer-link">Sharukh@theplacementpark.com</a>
+        </li>
+
+        <li>
+          <a href="tel:001234567890" class="footer-link">+91 985563355</a>
+        </li>
+<!-- 
+        <form action="" class="input-wrapper">
+          <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+
+          <button type="submit" class="submit-btn">Join</button>
+        </form> -->
+
+      </div>
+    
+
+    </div>
+    <div class="container">
+      <li>
+        <address style="margin-top: 20px;">
+          <strong>Security Advice: </strong> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates.  Click here to know more 
+          <br> 
+          <strong>EEO Statement: </strong>Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. We are driven by our promise of human forward. To read more of Randstad India's work in the space of equity, diversity and inclusion please click here      </address>
+      </li>
+    </div>
+
+
+  </footer>
+
+  <script>
+    function scrollUp(){
+      const scrollUp = document.getElementById('scroll-up');
+      // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
+      if(this.scrollY >= 0) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+  }
+  window.addEventListener('scroll', scrollUp)
+  </script>
+            <!--=============== SCROLL UP ===============-->
+            <a href="#" class="scrollup" id="scroll-up"> 
+              <ion-icon id="sup" name="logo-whatsapp"></ion-icon>
+            </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Adex</title>
+  <meta name="title" content="Adex">
+  <meta name="description" content="This is a business agency html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+  
+  .slider .slide{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      clip-path: circle(0% at 0 50%);
+  }
+  
+  .slider .slide.active{
+      clip-path: circle(150% at 0 50%);
+      transition: 2s;
+  }
+  
+  .slider .slide img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .slider{
+    position: relative;
+    background: white;
+    width: 800px;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+.slider .slide .info{
+color: white;
+background: black;
+width: 100%;
+margin: auto;
+margin-top: 20px;
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+.slider .slide .info h2{
+font-size: 2em;
+font-weight: 800;
+}
+
+.slider .slide .info p{
+font-size: 1em;
+font-weight: 400;
+}
+
+.navigation{
+height: 500px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+opacity: 0;
+transition: opacity 0.5s ease;
+}
+
+.slider:hover .navigation{
+opacity: 1;
+}
+
+.prev-btn, .next-btn{
+z-index: 999;
+font-size: 2em;
+color: #222;
+background: rgba(255, 255, 255, 0.8);
+padding: 10px;
+cursor: pointer;
+}
+
+.prev-btn{
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+}
+
+.next-btn{
+border-top-left-radius: 3px;
+border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility{
+z-index: 999;
+display: flex;
+justify-content: center;
+}
+
+.navigation-visibility .slide-icon{
+z-index: 999;
+background: rgba(255, 255, 255, 0.5);
+width: 20px;
+height: 10px;
+transform: translateY(-50px);
+margin: 0 6px;
+border-radius: 2px;
+box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active{
+background: #4285F4;
+}
+
+@media (max-width: 900px){
+.slider{
+width: 100%;
+}
+
+.slider .slide .info{
+position: relative;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+}
+}
+
+@media (max-width: 500px){
+.slider .slide .info h2{
+font-size: 1.8em;
+line-height: 40px;
+}
+
+.slider .slide .info p{
+font-size: 0.9em;
+}
+}
+.slide{
+width: 100%;
+height: 100%;
+}
+.info{
+height: 100%;
+width: 100%;
+margin: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+font-size: 1.5rem;
+font-weight: 500;
+line-height: 1.5;
+margin-left: 107px;
+margin-bottom: 30px;
+}    .your-class {
+margin: 0 auto;
+width: 80%;
+}
+.cards {
+background-color: #ccc;
+height: 150px;
+text-align: center;
+}
+
+
+
+
+.clientwrapper {
+width: 90vw;
+height: 50vh;
+display: flex;
+align-items: center;
+margin:auto;
+}
+.clientslider {
+width: 80%;
+height: 100px;
+position: relative;
+background: white;
+align-items: center;
+margin: auto;
+align-items: center;
+margin: auto;
+
+/* box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2); */
+display: flex;
+overflow: hidden;
+}
+.clientslide {
+background-color: black;
+height: 100px;
+display: flex;
+align-items: center;
+animation: slideshow 60s linear infinite;
+}
+.clientslide img {
+height: 100px;
+border: 3px solid white;
+background: white;
+padding: 0 30px 0 30px;
+}
+@keyframes slideshow {
+0% {transform: translateX(0);}
+100% {transform: translateX(-100%);}
+}
+.clientslider::before, .slider::after {
+height: 100px;
+width: 200px;
+position: absolute;
+content: "";
+/* background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%); */
+z-index: 2;
+}
+.clientslider::before {
+left: 0;
+top: 0;
+}
+.clientslider::after {
+right:0;
+top:0;
+
+transform: rotateZ(180deg);
+}
+
+</style>
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="134px" height="104px" alt="Adex home" class="logo-light">
+
+        <img src="./assets/2 TPP Logos/logo.png" width="134px" height="104px" alt="Adex home" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="134px" height="104px" alt="Adex home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="job.html" class="navbar-link">Job Seeker</a>
+          </li>
+
+          <li>
+            <a href="companies.html" class="active_link">Companies</a>
+          </li>
+
+          <li>
+            <a href="crt.html" class="navbar-link">CRT & Placements</a>
+          </li>
+
+          <li>
+            <a href="abt.html" class="navbar-link">About Us</a>
+          </li>
+            <li>
+            <a href="abt.html" class="navbar-link">Team Login</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:info@email.com" class="contact-link">info@email.com</a>
+
+          <a href="tel:001234567890" class="contact-link">00 (123) 456 78 90</a>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-dribbble"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="#" class="btn btn-primary">Apply for Job</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+
+  <main>
+    <article style="background-color: #0f1941;">
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">About Our Service<br> The Placement Park:</h1>
+
+            <p class="hero-text">
+              Discover endless job opportunities with The Placement Park, the top portal for job seekers. Get hired with our efficient placement services and take the first step towards your dream career. Trust us for reliable job recruitment services and embark on a professional journey with confidence.            </p>
+
+            <div class="btn-wrapper">
+
+              <a href="#" class="btn btn-primary">Apply for Job</a>
+
+              <!-- <a href="#" class="btn btn-outline">Contact Us</a> -->
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+
+
+
+      <!-- Location Reach -->
+
+      
+      <section class="about" aria-labelledby="about-label" style="background-color: white; margin-top: 0; padding-bottom: 45px; padding-top: 45px; background-color: yellow;">
+        <div class="container" style="height:max-content;">
+      
+          <div class="hero-content" style="height:270px">
+      
+            </h2>
+<img src="assets/images/63CBDF4D-E80B-4840-98749A22F2616B5A-1.svg"  style="width: 350px;" alt="">
+            <p class="hero-text" style="color: black;">
+              <!-- <div class="btn-wrapper">
+              <a href="#" class="aa" style="background-color: black; color: white;">Campus Recruitment</a>
+        
+            </div> -->
+        
+          </div>
+        <!-- <figure class="about-banner">
+            <img src="./assets/images/Profile data.gif" width="800" height="580" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure> -->
+          <div class="feature-content">
+
+            <!-- <p class="section-subtitle" id="feautre-label">Our Solutions</p> -->
+
+            <h2 class="h2 section-title">
+             Location Reach
+            </h2>
+
+            <p class="section-text" style="text-align: left;">
+              "Our company is proud to announce that we have expanded our hiring reach to include all of India. This means that no matter where your business is located, we are now able to provide you with exceptional recruitment services.
+
+
+
+              Our professional team of recruiters is dedicated to ensuring that the hiring process is as seamless and efficient as possible. So, if you're looking to expand your team, look no further than our pan India hiring services"
+            </p>
+   
+
+
+          </div>
+        </div>
+      </section>
+
+
+            <!-- 
+        - #STATS
+      -->
+
+      <section class="stats" aria-label="our stats" style="padding-top: 100px; background-color: #0f1941;">
+        <div class="container">
+
+          <ul class="stats-card has-bg-image" style="background-image: url('./assets/images/stats-bg.jpg')">
+
+            <li>
+              <p class="card-text">
+                <span class="h1">8000+</span>
+
+                <spna class="span">Candidates Palced</spna>
+              </p>
+            </li>
+
+            <li>
+              <p class="card-text">
+                <span class="h1">52+</span>
+
+                <spna class="span">Clients Served</spna>
+              </p>
+            </li>
+
+            <li>
+              <p class="card-text">
+                <span class="h1">70+</span>
+
+                <spna class="span">College Connectivity</spna>
+              </p>
+            </li>
+            <li>
+              <p class="card-text">
+                <span class="h1">450+</span>
+
+                <spna class="span">Campus Drives</spna>
+              </p>
+            </li>
+            
+            <li>
+              <p class="card-text">
+                <span class="h1">15000+</span>
+
+                <spna class="span">Candidates upskilled</spna>
+              </p>
+            </li>
+
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <!-- Slider testimonial -->
+
+
+    <div class="slider" style="background-color: #0f1941;">
+      <div class="slide active">
+        <div class="info">
+          <h2>Winter Mountains</h2>
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/xqnbvely.json"
+                trigger="hover"
+                delay="2000"
+                colors="primary:#ffffff,secondary:#ffffff"
+                style="width:50px;height:50px;  transform: scaleX(-1) ">
+            </lord-icon>
+          <p>
+            
+            
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+            
+          </p>
+          </div>
+      </div>
+      <div class="slide">     
+        <div class="info">
+          <h2>Tropical Desert</h2>
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/xqnbvely.json"
+              trigger="hover"
+              delay="2000"
+              colors="primary:#ffffff,secondary:#ffffff"
+              style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="slide">  
+        <div class="info">
+          <h2>Steaming Volcanoes</h2>
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/xqnbvely.json"
+              trigger="hover"
+              delay="2000"
+              colors="primary:#ffffff,secondary:#ffffff"
+              style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="slide">   
+        <div class="info">
+          <h2>Mountain River</h2>
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/xqnbvely.json"
+              trigger="hover"
+              delay="2000"
+              colors="primary:#ffffff,secondary:#ffffff"
+              style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="info">
+          <h2>Egypt Pyramids</h2>
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/xqnbvely.json"
+              trigger="hover"
+              delay="2000"
+              colors="primary:#ffffff,secondary:#ffffff"
+              style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="navigation">
+        <i class="fas fa-chevron-left prev-btn"></i>
+        <i class="fas fa-chevron-right next-btn"></i>
+      </div>
+      <div class="navigation-visibility">
+        <div class="slide-icon active"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const slider = document.querySelector(".slider");
+      const nextBtn = document.querySelector(".next-btn");
+      const prevBtn = document.querySelector(".prev-btn");
+      const slides = document.querySelectorAll(".slide");
+      const slideIcons = document.querySelectorAll(".slide-icon");
+      const numberOfSlides = slides.length;
+      var slideNumber = 0;
+  
+      //image slider next button
+      nextBtn.addEventListener("click", () => {
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+  
+        slideNumber++;
+  
+        if(slideNumber > (numberOfSlides - 1)){
+          slideNumber = 0;
+        }
+  
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      });
+  
+      //image slider previous button
+      prevBtn.addEventListener("click", () => {
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+  
+        slideNumber--;
+  
+        if(slideNumber < 0){
+          slideNumber = numberOfSlides - 1;
+        }
+  
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      });
+  
+      //image slider autoplay
+      var playSlider;
+  
+      var repeater = () => {
+        playSlider = setInterval(function(){
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+          slideIcons.forEach((slideIcon) => {
+            slideIcon.classList.remove("active");
+          });
+  
+          slideNumber++;
+  
+          if(slideNumber > (numberOfSlides - 1)){
+            slideNumber = 0;
+          }
+  
+          slides[slideNumber].classList.add("active");
+          slideIcons[slideNumber].classList.add("active");
+        }, 4000);
+      }
+      repeater();
+  
+      //stop the image slider autoplay on mouseover
+      slider.addEventListener("mouseover", () => {
+        clearInterval(playSlider);
+      });
+  
+      //start the image slider autoplay again on mouseout
+      slider.addEventListener("mouseout", () => {
+        repeater();
+      });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" aria-label="call to action" style="margin-top:100px; height: max-width: ;; background-color: #FFED00;">
+        <div class="container">
+
+          <h2 class="h2 section-title" style="color:black;">
+            Join our community by using our services and grow your business.
+          </h2>
+
+          <a href="#" class="btn btn-primary">Request a Call back</a>
+
+        </div>
+      </section>
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+
+  <footer class="footer">
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="134" height="104" alt="Adex home">
+        </a>
+
+        <p class="footer-text">
+          &copy; 2023 The Placement Park <br> All rights reserved.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+         
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Get in Touch</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, 50-75-27, Ganesh Nagar, Satyam Junction, Vizag 53001          </address>
+        </li>
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, KSR Towers, 6th Floor, Beside Indian Oil Pump, Madhapur, Hyderabad 500081         </address>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Learn More</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Home</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Our Story</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Companies</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">CRT and Placements</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul>
+
+      <div class="footer-list">
+
+        <p class="h4 footer-list-title">Our CEO</p>
+        <li>
+          <p >SharukhTirumani Co-Founder & CEO The Placement Park</p>
+        </li>
+
+        <li>
+          <a href="mailto:info@email.com" class="footer-link">Sharukh@theplacementpark.com</a>
+        </li>
+
+        <li>
+          <a href="tel:001234567890" class="footer-link">+91 985563355</a>
+        </li>
+<!-- 
+        <form action="" class="input-wrapper">
+          <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+
+          <button type="submit" class="submit-btn">Join</button>
+        </form> -->
+
+      </div>
+    
+
+    </div>
+    <div class="container">
+      <li>
+        <address style="margin-top: 20px;">
+          <strong>Security Advice: </strong> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. Click here to know more 
+          <br> EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. We are driven by our promise of human forward. To read more of Randstad India's work in the space of equity, diversity and inclusion please click here      </address>
+      </li>
+    </div>
+
+
+  </footer>
+
+
+  <script>
+    function scrollUp(){
+      const scrollUp = document.getElementById('scroll-up');
+      // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
+      if(this.scrollY >= 0) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+  }
+  window.addEventListener('scroll', scrollUp)
+  </script>
+            <!--=============== SCROLL UP ===============-->
+            <a href="#" class="scrollup" id="scroll-up"> 
+              <ion-icon id="sup" name="logo-whatsapp"></ion-icon>
+            </a>
+
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
